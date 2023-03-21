@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>School News</title> 
+            <style>
+        body{
+            background-color:yellow;}
+
+            #Heading{
+                text-align :center;
+            }
+            #author{
+                font-style:italic;
+            }
+            </style>
+    </head>
+    <body>
+
+    </body>
+        <h1 id= "Heading"> School News</h1>
+    <div>
+        <ul>
+            {% for article in news %}
+                <h1>{{article.title}}</h1>
+                <p id="author">by {{article.author}}. {{article.date|date:"d/m/Y" }}</p>
+                <p>{{article.description}}
+                </p>
+            {% endfor %}
+            </ul>
+
+    </div>
+    </body>
+</html>
