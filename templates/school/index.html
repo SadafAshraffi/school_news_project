@@ -6,10 +6,10 @@
         body{
             background-color:yellow;}
 
-            #Heading{
+            #header{
                 text-align :center;
             }
-            #author{
+            #auth{
                 font-style:italic;
             }
             </style>
@@ -17,13 +17,13 @@
     <body>
 
     </body>
-        <h1 id= "Heading"> School News</h1>
+        <h1 id= "header"> School News</h1>
     <div>
         <ul>
-            {% for article in news %}
-                <h1>{{article.title}}</h1>
-                <p id="author">by {{article.author}}. {{article.date|date:"d/m/Y" }}</p>
-                <p>{{article.description}}
+            {% for column in news %}
+                <h1>{{column.title}}</h1>
+                <p id="auth">by {{column.author}}. {{column.date|date:"d/m/Y" }}</p>
+                <p>{{column.description}}
                 </p>
             {% endfor %}
             </ul>
